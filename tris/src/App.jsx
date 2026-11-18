@@ -7,7 +7,7 @@ const LINES = [
   [0, 4, 8], [2, 4, 6],
 ]
 
-export function calculateWinner(squares) {
+function calculateWinner(squares) {
   for (const [a, b, c] of LINES) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return { winner: squares[a], line: [a, b, c] }
